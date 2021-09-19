@@ -1,0 +1,60 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Exoplanet Exploration",
+        "description": "An exoplanets exploratory project.",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080/"
+        }
+    ],
+    "tags": [
+        {
+            "name": "exoplanet",
+            "description": "Operations related to exoplanets."
+        }
+    ],
+    "paths": {
+        "/exoplanet/orphan": {
+            "get": {
+                "tags": [
+                    "exoplanet"
+                ],
+                "description": "Gets the count of rogue(orphan) exoplanets.",
+                "responses": {
+                    "200": {
+                        "description": "Everthing went fine"
+                    }
+                }
+            }
+        },
+        "/exoplanet/hottest-star-planet": {
+            "get": {
+                "tags": [
+                    "exoplanet"
+                ],
+                "description": "Gets the planet with the hottest host star.",
+                "responses": {
+                    "200": {
+                        "description": "Everthing went fine"
+                    }
+                }
+            }
+        },
+        "/exoplanet/timeline": {
+            "get": {
+                "tags": [
+                    "exoplanet"
+                ],
+                "description": "Gets the timeline of the number of planets discovered per year grouped by size.",
+                "responses": {
+                    "200": {
+                        "description": "Everthing went fine"
+                    }
+                }
+            }
+        }
+    }
+}

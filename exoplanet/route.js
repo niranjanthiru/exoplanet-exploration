@@ -14,7 +14,7 @@ module.exports = class ExoplanetRoutes {
     constructor(app) {
         let baseUrl = '/exoplanet';
         /**
-         * @api {get} /exoplanet/orphan Gets all rogue(orphan) exoplanets
+         * @api {get} /exoplanet/orphan Gets the count of rogue(orphan) exoplanets.
          * @apiName GetOrphanPlanets
          * @apiGroup Exoplanet
          *
@@ -54,7 +54,7 @@ module.exports = class ExoplanetRoutes {
         });
 
         /**
-         * @api {get} /exoplanet/timeline Gets the timeline of the number of planets discovered per year grouped by size
+         * @api {get} /exoplanet/timeline Gets the timeline of the number of planets discovered per year grouped by size.
          * @apiName GetDiscoveryTimeline
          * @apiGroup Exoplanet
          *

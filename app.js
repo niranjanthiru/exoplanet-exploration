@@ -6,7 +6,10 @@
 */
 
 const express = require('express');
+var cors = require('cors');
 const app = express();
+
+app.use(cors());
 
 const ExoplanetRoute = require('./exoplanet/route');
 new ExoplanetRoute(app);
