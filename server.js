@@ -5,7 +5,7 @@
 * @since    09/19/2021
 */
 
-const app = require('./app');
+const app = require('./lib/app');
 const config = require('./lib/config');
 const logger = require('./lib/logger');
 

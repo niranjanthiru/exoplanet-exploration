@@ -29,7 +29,7 @@ describe("getPlanets()", () => {
                     });
                 }
             };
-            const Exoplanet = proxyquire('../../exoplanet/controller', {
+            const Exoplanet = proxyquire('../../lib/exoplanet/controller', {
                 './service': ExoplanetService
             });
             exoplanet = new Exoplanet();
@@ -70,7 +70,7 @@ describe("getPlanets()", () => {
                     });
                 }
             };
-            const Exoplanet = proxyquire('../../exoplanet/controller', {
+            const Exoplanet = proxyquire('../../lib/exoplanet/controller', {
                 './service': ExoplanetService
             });
             exoplanet = new Exoplanet();
@@ -96,7 +96,7 @@ describe("getPlanets()", () => {
                     });
                 }
             };
-            const Exoplanet = proxyquire('../../exoplanet/controller', {
+            const Exoplanet = proxyquire('../../lib/exoplanet/controller', {
                 './service': ExoplanetService
             });
             exoplanet = new Exoplanet();
@@ -145,7 +145,7 @@ describe("getHottestStarPlanet()", () => {
                     });
                 }
             };
-            const Exoplanet = proxyquire('../../exoplanet/controller', {
+            const Exoplanet = proxyquire('../../lib/exoplanet/controller', {
                 './service': ExoplanetService
             });
             exoplanet = new Exoplanet();
@@ -191,7 +191,7 @@ describe("getHottestStarPlanet()", () => {
                     });
                 }
             };
-            const Exoplanet = proxyquire('../../exoplanet/controller', {
+            const Exoplanet = proxyquire('../../lib/exoplanet/controller', {
                 './service': ExoplanetService
             });
             exoplanet = new Exoplanet();
@@ -216,7 +216,7 @@ describe("getHottestStarPlanet()", () => {
                     });
                 }
             };
-            const Exoplanet = proxyquire('../../exoplanet/controller', {
+            const Exoplanet = proxyquire('../../lib/exoplanet/controller', {
                 './service': ExoplanetService
             });
             exoplanet = new Exoplanet();
@@ -257,7 +257,7 @@ describe("getDiscoveryTimeline()", () => {
                     });
                 }
             };
-            const Exoplanet = proxyquire('../../exoplanet/controller', {
+            const Exoplanet = proxyquire('../../lib/exoplanet/controller', {
                 './service': ExoplanetService
             });
             exoplanet = new Exoplanet();
@@ -300,7 +300,7 @@ describe("getDiscoveryTimeline()", () => {
                     });
                 }
             };
-            const Exoplanet = proxyquire('../../exoplanet/controller', {
+            const Exoplanet = proxyquire('../../lib/exoplanet/controller', {
                 './service': ExoplanetService
             });
             exoplanet = new Exoplanet();
@@ -367,7 +367,7 @@ describe("getDiscoveryTimeline()", () => {
                     });
                 }
             };
-            const Exoplanet = proxyquire('../../exoplanet/controller', {
+            const Exoplanet = proxyquire('../../lib/exoplanet/controller', {
                 './service': ExoplanetService
             });
             exoplanet = new Exoplanet();
@@ -404,7 +404,7 @@ describe("getDiscoveryTimeline()", () => {
                     });
                 }
             };
-            const Exoplanet = proxyquire('../../exoplanet/controller', {
+            const Exoplanet = proxyquire('../../lib/exoplanet/controller', {
                 './service': ExoplanetService
             });
             exoplanet = new Exoplanet();
