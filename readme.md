@@ -24,7 +24,7 @@ minikube service exoplanet-exploration
 # Deployment using only Docker
 The project is dockerized and the below commands can be used to create an image and its container
 ```
-docker build . -t exoplanet-image
+docker build -t exoplanet-image --target prod .
 docker run --name exoplanet-app -p 8080:8080 -d exoplanet-image
 ```
 ## Stoping the docker container
@@ -38,8 +38,15 @@ You should delete the existing docker image to deploy a new image of the same na
  docker rmi exoplanet-image
  docker rm exoplanet-app
 ```
-# Testing
-This project uses the jasmine framework to test all the functionalities and the test cases are placed inside the /spec folder. Running the following command would run the tests
+# Unit testing
+This project uses the jasmine framework to test all the functionalities and the test cases are placed inside the /spec folder.
+## Testing using Docker 
+This approach only requires Docker to be installed in the host machine. If all the tests are successful, no error is raised.
+```
+docker build -t exoplanet-image --target test .
+```
+## Alternate approach
+Running the following command would run the tests, but this requires node and required packages to be installed in the host machine.
 ```
 npx jasmine
 ```

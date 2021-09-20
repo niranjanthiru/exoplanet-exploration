@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:14 as base
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -7,15 +7,15 @@ WORKDIR /usr/src/app
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json ./
 
-# If building the code in dev environment
-# RUN npm install
-
-# If building the code for production
-RUN npm ci --only=production
-
-# Bundle app source
+# Test the application through Docker
+FROM base as test
+RUN npm ci
 COPY . .
+RUN npm run test
 
+# Deploy for production environment
+FROM base as prod
+RUN npm ci --production
+COPY . .
 EXPOSE 8080
-
 CMD [ "node", "server.js" ]
