@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exoplanet-exploration
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: exoplanet-exploration
+  template:
+    metadata:
+      labels:
+        app: exoplanet-exploration
+    spec:
+      containers:
+      - name: exoplanet-exploration
+        image: niranjanthirusangu/exoplanet-image:latest
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: exoplanet-exploration
+spec:
+  type: NodePort
+  selector:
+    app: exoplanet-exploration
+  ports:
+  - port: 80
+    targetPort: 8080
