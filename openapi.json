@@ -7,6 +7,9 @@
     },
     "servers": [
         {
+            "url": "https://thawing-woodland-34236.herokuapp.com/"
+        },
+        {
             "url": "http://localhost:8080/"
         }
     ],
@@ -25,7 +28,20 @@
                 "description": "Gets the count of rogue(orphan) exoplanets.",
                 "responses": {
                     "200": {
-                        "description": "Everthing went fine"
+                        "description": "Everthing went fine",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "orphanPlanetsCount": {
+                                            "type": "number",
+                                            "example": 2
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -38,7 +54,20 @@
                 "description": "Gets the planet with the hottest host star.",
                 "responses": {
                     "200": {
-                        "description": "Everthing went fine"
+                        "description": "Everthing went fine",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "planetIdentifier": {
+                                            "type": "string",
+                                            "example": "V391 Peg b"
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -51,7 +80,40 @@
                 "description": "Gets the timeline of the number of planets discovered per year grouped by size.",
                 "responses": {
                     "200": {
-                        "description": "Everthing went fine"
+                        "description": "Everthing went fine",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "timeline": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "dicoveryYear": {
+                                                        "type": "integer",
+                                                        "example": 2013
+                                                    },
+                                                    "small": {
+                                                        "type": "integer",
+                                                        "example": 58
+                                                    },
+                                                    "medium": {
+                                                        "type": "integer",
+                                                        "example": 30
+                                                    },
+                                                    "large": {
+                                                        "type": "integer",
+                                                        "example": 2
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

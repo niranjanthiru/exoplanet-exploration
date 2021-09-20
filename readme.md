@@ -1,5 +1,5 @@
 # About Exoplanet Exploration
-This is a simple NodeJs project which uses the Open Exoplanet Catalogue(https://www.kaggle.com/mrisdal/open-exoplanet-catalogue/code), to get insights into the mighty celestial objects.
+This is a simple NodeJs project which uses the Open Exoplanet Catalogue(https://www.kaggle.com/mrisdal/open-exoplanet-catalogue/code), to get insights into the mighty celestial objects. The lastest version of the application is deployed no heroku(https://thawing-woodland-34236.herokuapp.com/exoplanet/orphan).
 # Configuration file
 All the application related configurations are present in the .env file in the root directory of the project. One can alternatively change the environment variable of the host system(docker) to manipulate these configurations.
 * EXOPLANET_DATA_URL - Used to say the URL from which the planets' information can be fetched.
