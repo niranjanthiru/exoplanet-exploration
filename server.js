@@ -9,6 +9,15 @@ const app = require('./lib/app');
 const config = require('./lib/config');
 const logger = require('./lib/logger');
 
+app.use(function (req, res, next) {
+  res.status(404).send({ "status": "error", "message": "Resource not found." });
+})
+
+app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).send({ "status": "error", "message": "Internal server error." });
+})
+
 let server;
 server = app.listen(config['PORT'], () => {
   logger.info(`Listening to port ${config['PORT']}`);
