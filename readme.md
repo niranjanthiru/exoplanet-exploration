@@ -51,6 +51,8 @@ Running the following command would run the tests, but this requires node and re
 npx jasmine
 ```
 # API documentation
-OpenAPI specification is used for documenting the API endpoints. All the endpoints are documented in openapi.json. The openapi.json is compiled to openapi.html, which can be opened in a browser to read the API documentation. Another simple way to read the API document is by importing the openapi.json to swagger's online editor(https://editor.swagger.io), using which one can also try the APIs.
+OpenAPI specification is used for documenting the API endpoints. All the endpoints are documented in openapi.json. The openapi.json is compiled to openapi.html, which can be opened in a browser to read the API documentation, or use this link: https://htmlpreview.github.io/?https://github.com/niranjanthiru/exoplanet-exploration/blob/master/openapi.html.  
+   
+Another simple way to read the API document is by importing the openapi.json to swagger's online editor(https://editor.swagger.io), using which one can also try the APIs.
 
 
