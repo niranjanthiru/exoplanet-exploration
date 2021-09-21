@@ -6,7 +6,7 @@ All the application related configurations are present in the .env file in the r
 * LOG_FILE - Says the location of the logfile.
 * PORT - Port on which the service should listen.
 # Logs
-All the logs are placed in the server.log file in the project's root directory by default, but this can be changed by using the `PORT` configuration variable.
+All the logs are placed in the server.log file in the project's root directory by default, but this can be changed by using the `LOG_FILE` configuration variable.
 # Deployment using Kubernetes
 This deployment approach requires Kubernetes(kubectl), with minikube for clustering and Docker for containerization.
 First, create a cluster with minikube. To utilize all the cores of the CPU, create nodes equals to the number of cores in the host CPU.
@@ -35,8 +35,8 @@ docker stop exoplanet-app
 ## Deleting the container and the image
 You should delete the existing docker image to deploy a new image of the same name. The below two commands removes the image and then removes the container
 ```
- docker rmi exoplanet-image
  docker rm exoplanet-app
+ docker rmi exoplanet-image
 ```
 # Unit testing
 This project uses the jasmine framework to test all the functionalities and the test cases are placed inside the /spec folder.
@@ -51,6 +51,6 @@ Running the following command would run the tests, but this requires node and re
 npx jasmine
 ```
 # API documentation
-OpenAPI specification is used for documenting the API endpoints. All the endpoints are documented in openapi.json. The simplest way to read the API using swagger UI is by importing to swaggers online editor(https://editor.swagger.io).
+OpenAPI specification is used for documenting the API endpoints. All the endpoints are documented in openapi.json. The openapi.json is compiled to openapi.html, which can be opened in a browser to read the API documentation. Another simple way to read the API document is by importing the openapi.json to swagger's online editor(https://editor.swagger.io), using which one can also try the APIs.
 
 
